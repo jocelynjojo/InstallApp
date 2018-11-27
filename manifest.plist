@@ -11,7 +11,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://github.com/zhu0823/InstallApp/blob/master/operation.ipa</string>
+					<string>http://172.16.13.27:8028/operation.ipa</string>
 				</dict>
 				<dict>
 					<key>kind</key>
