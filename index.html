@@ -1,0 +1,136 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="icon" type="image/x-icon" href="ios-template-40.png">
+		<meta name="apple-itunes-app" content="app-id=1441617042"></head><body>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  </head>
+  	<title>Welcome to zhuxiaoming</title>
+  	<style type="text/css">
+  	ul,li {
+			list-style: none;
+			text-align: left;
+		}
+		</style>
+		<div style="text-align: center;">
+	
+			<input type="image" src="ios-template-512.png" onclick="javascript:downloadAction(0);">
+			<div style="width: 500px; margin: 0 auto;">
+				<li>iOS v1.0.2(18113013) 正式环境</li>
+				<li>新增审核用的登录注册页</li>
+			<li>新增检查版本更新</li>
+			</div>
+
+		</div>
+
+		<div style="text-align: center;">
+	
+			<input type="image" src="ios-template-512.png" onclick="javascript:downloadAction(1);">
+			<div style="width: 500px; margin: 0 auto;">
+				<li>iOS v1.0.3(18120609) 测试环境</li>
+				<li>新增钉钉登录</li>
+			<li>修复登录页面在某些设备上显示异常</li>
+			</div>
+
+		</div>
+		<p></p>
+    <p></p>
+    <li id='showText'>         9        </li>
+    <p></p>
+    <p></p>
+		<div style="text-align: center;">
+			<button  onclick="javascript:downloadAction(2);">测试跳转App</button>
+		</div>
+    <p></p>
+    <a href="javascript:;" id="openApp">openAPP</a>
+    <p></p>
+    <p></p>
+    <div style="text-align: center;">
+  
+      <button  onclick="javascript:downloadAction(3);">app-test</button>
+      <button  onclick="javascript:downloadAction(4);">app</button>
+      <button  onclick="javascript:downloadAction(5);">download</button>
+      <button  onclick="javascript:downloadAction(6);">test</button>
+      <button  onclick="javascript:downloadAction(7);">dstapp</button>
+    </div>
+
+	<br />
+
+	<script type="text/javascript">
+
+    
+
+
+    document.getElementById('openApp').onclick = function(e){
+
+
+      var timeout, t = 1000, hasApp = true;
+      setTimeout(function () {
+           if (!hasApp) {
+          window.location.href = 'https://itunes.apple.com/cn/app/%E5%9C%B0%E4%B8%8A%E9%93%81/id1177377089?mt=8&ign-mpt=uo%3D4'
+        }
+      document.body.appendChild(ifr);
+       }, 2000)
+        var t1 = Date.now();
+        var ifr = document.createElement('iframe');
+        ifr.setAttribute('src', 'dstcar://platform/rental/long?invited_code=kdrPvC');
+        ifr.setAttribute('style', 'display:none');  
+        document.body.appendChild(ifr);
+        timeout = setTimeout(function () {
+          try_to_open_app(t1);
+        }, t);
+
+
+       function try_to_open_app(t1) {
+          var t2 = Date.now();
+          if (!t1 || t2 - t1 < t + 100) {
+              hasApp = false;
+           }
+
+    };
+
+  	function downloadAction(tag) {
+  		if (tag == 0) {
+  			location.href='itms-services://?action=download-manifest&url=https://zhuxiaoming.xyz/operationTest/manifest.plist'	
+  		}else if (tag == 1) {
+			  location.href='itms-services://?action=download-manifest&url=https://zhuxiaoming.xyz/operationEnterprise/manifest.plist'
+  		}else if (tag == 2) {
+
+        var frame = document.createElement('iframe');
+        frame.src = 'dstcar://platform/rental/long?invited_code=kdrPvC';
+        frame.style.display = 'none';
+        document.body.appendChild(frame);        
+
+        window.setTimeout(function() { 
+          document.body.removeChild(frame);
+          window.location.href = 'https://itunes.apple.com/cn/app/%E5%9C%B0%E4%B8%8A%E9%93%81/id1177377089?mt=8&ign-mpt=uo%3D4';
+        }, 2);
+      
+        
+        
+  			// setTimeout(function() {  // 必须要使用settimeout
+  			// 	var a = document.createElement("a"); //创建a元素
+  			// 	a.setAttribute("href", "dstcar://platform/rental/long?invited_code=kdrPvC"),a.style.display = "none", document.body.appendChild(a);
+  			// 	var t = document.createEvent("HTMLEvents"); // 返回新创建的 Event 对象，具有指定的类型。
+  			// 	t.initEvent("click", !1, !1) // 初始化新事件对象的属性
+  			// 	a.dispatchEvent(t)  // 绑定事件
+			  // }, 0)
+        
+  		}else if (tag == 3) {
+        document.location.href = '/test-openapp/app-test.html';
+      }else if (tag == 4) {
+        document.location.href = '/test-openapp/app.html';
+      }else if (tag == 5) {
+        document.location.href = '/test-openapp/download.html';
+      }else if (tag == 6) {
+        document.location.href = '/test-openapp/test.html';
+      }else if (tag == 6) {
+        document.location.href = 'https://api-apply.dev.proxy.dstcar.com/rental/long?invite_code=ugT5Jf';
+      }
+  	}
+	</script>
+</html>
